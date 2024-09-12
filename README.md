@@ -68,4 +68,8 @@ Redis Usage: Redis is utilized to save the game state and user points. It ensure
 
 ![image](https://github.com/user-attachments/assets/9b6fb2bb-b6f3-4a11-a3f7-eb2e776d2022)
 
+## Mobile Responsive UI
+![image](https://github.com/user-attachments/assets/ad3e2f41-7c3c-4471-bcb6-2e5c7d698382)
+
+
 
