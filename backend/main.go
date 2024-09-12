@@ -15,11 +15,11 @@ func main() {
 	router := gin.Default()
 
 	corsConfig := cors.Config{
-        AllowOrigins:     []string{"http://localhost:5173"}, // Allow only this origin
-        AllowMethods:     []string{"GET", "POST", "PUT", "DELETE", "OPTIONS"}, // Allowed HTTP methods
-        AllowHeaders:     []string{"Origin", "Content-Type", "Authorization"}, // Allowed headers
-        ExposeHeaders:    []string{"Content-Length", "Authorization"}, // Headers that the browser can access
-        AllowCredentials: true, // Allow cookies or other credentials
+        AllowOrigins:     []string{"http://localhost:5173", "https://boom-cats.vercel.app"}, 
+        AllowMethods:     []string{"GET", "POST", "PUT", "DELETE", "OPTIONS"},
+        AllowHeaders:     []string{"Origin", "Content-Type", "Authorization"},
+        ExposeHeaders:    []string{"Content-Length", "Authorization"}, 
+        AllowCredentials: true, 
     }
 
     router.Use(cors.New(corsConfig))
