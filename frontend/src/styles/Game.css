@@ -1,0 +1,20 @@
+@keyframes shuffle {
+    25% {
+        transform: translateX(315px);
+    }
+
+    50% {
+        transform: translateX(0px);
+    }
+
+    100% {
+        opacity: 0;
+    }
+}
+
+.animate-shuffle {
+    animation-name: shuffle;
+    animation-duration: 2s;
+    animation-fill-mode: forwards;
+    animation-iteration-count: 1;
+}
