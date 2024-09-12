@@ -4,11 +4,16 @@
 
 "Exploding Kitten" is an online single-player card game where players draw cards from a deck, aiming to avoid the exploding kitten card. The game includes features like user authentication, a leaderboard, and real-time updates, all built with modern technologies.
 
+
 ## Tech Stack
 
 - **Frontend:** React, Vite, Redux Toolkit, Tailwind CSS
 - **Backend:** Golang (Gin framework)
 - **Database:** Redis
+
+I’ve used Redux Toolkit for state management in the frontend. It helps in efficiently handling the game state, including the deck of cards, drawn cards, and game status, by using slices and actions.
+
+Redis Usage: Redis is utilized to save the game state and user points. It ensures that game progress is preserved and user scores are stored and retrieved efficiently. This allows for automatic saving of game progress and real-time updates to the leaderboard.
 
 ## Setup Instructions
 
