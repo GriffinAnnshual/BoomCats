@@ -10,11 +10,13 @@ import (
 	"github.com/redis/go-redis/v9"
 )
 
-func NewRedisClient() *redis.Client {
-	 err := godotenv.Load()
-    if err != nil {
-        log.Fatalf("Error loading .env file")
+func init() {
+    if err := godotenv.Load(); err != nil {
+        log.Println("No .env file found, assuming environment variables are set")
     }
+}
+
+func NewRedisClient() *redis.Client {
 
     redisURL := os.Getenv("redis_url")
 
