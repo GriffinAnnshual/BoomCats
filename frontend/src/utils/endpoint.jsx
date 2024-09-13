@@ -1,6 +1,6 @@
 
 
 
-const endpoint = "https://boomcats-production.up.railway.app"
+const endpoint = "http://localhost:8000"
 
 export default endpoint

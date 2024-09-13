@@ -51,17 +51,16 @@ function GamePage() {
 			}
 		}
 		
-		if (gameState.deck.length === 0) {
+		if (gameState.deck.length === 0 && gameState.status === "ongoing") {
 			;(async () => {
 				await handleWinGame()
 				dispatch(gameAction.setGameState("win"))
 			})()
 		}
-	}, [dispatch, gameState.deck.length, username])
+	}, [dispatch, gameState.deck.length, gameState.status, username])
 
 	
 	const saveGameToRedis = async (username, gameState) => {
-		console.log("I came in")
 		try {
 			await axios.post(
 				`${endpoint}/save-game`,

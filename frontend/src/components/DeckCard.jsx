@@ -64,13 +64,6 @@ function DeckCard({num, life, index, deck}) {
         break;
       case 1:
         if (life === 0){
-         dispatch(gameAction.setGameState("lost"))
-          dispatch(
-            gameAction.setDeckState({
-              playing: true,
-              current: deck[num],
-            })
-          )
           dispatch(gameAction.setGameState("lost"))
           toast.error("Game Over!")
         }
@@ -81,7 +74,7 @@ function DeckCard({num, life, index, deck}) {
         break;
       case 2:
         dispatch(gameAction.resetDeck())
-        await saveGameToRedis(username, gameState)
+        await saveGameToRedis(username, {})
         toast.success("Cards Shuffled")
         break;
       case 3: 
@@ -89,8 +82,6 @@ function DeckCard({num, life, index, deck}) {
 				toast.success("You got a life")
         break;
     }
-    console.log("here I am")
-    console.log(username, gameState.deck, "upper")
 
     const current_deck = gameState.deck
     let updatedDeck = [...current_deck] 

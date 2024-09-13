@@ -11,7 +11,7 @@ const GameModal = ({ isGameOver, hasWon, onRestart }) => {
 					height={"200vh"}
 				/>
 			)}
-			<div className="bg-white rounded-lg p-6 shadow-lg text-center">
+			<div className="bg-white w-full max-w-lg py-[5rem] rounded-lg p-6 shadow-lg text-center">
 				<h2 className="text-3xl font-bold mb-4">
 					{hasWon ? "🎉 Game Won!" : "😞 Game Lost!"}
 				</h2>
