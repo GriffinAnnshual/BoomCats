@@ -18,6 +18,7 @@ function GamePage() {
 
 	const restartGame = async () => {
 		dispatch(gameAction.resetDeck())
+		dispatch(gameAction.resetLife())
 
 		await saveGameToRedis(username, {})
 

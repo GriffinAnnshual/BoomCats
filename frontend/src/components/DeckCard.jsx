@@ -26,7 +26,6 @@ function DeckCard({num, life, index, deck}) {
   }
 
   const saveGameToRedis = async (username, gameState) => {
-    console.log("I came in")
     try {
       await axios.post(
         `${endpoint}/save-game`,
@@ -64,7 +63,10 @@ function DeckCard({num, life, index, deck}) {
         break;
       case 1:
         if (life === 0){
-          dispatch(gameAction.setGameState("lost"))
+          setTimeout(()=>{
+            dispatch(gameAction.setGameState("lost"))
+          },1500)
+          
           toast.error("Game Over!")
         }
         else{
@@ -112,7 +114,7 @@ function DeckCard({num, life, index, deck}) {
   return (
 		<div
 			onClick={()=> selectCard()}
-			className={` md:w-60 md:h-72 w-36 h-48 hover:scale-105 transform hover:translate-y-8 duration-200 bg-blue-500 rounded-xl shadow-lg flex justify-center items-center cursor-pointer`}>
+			className={` md:w-60 md:h-72 w-36 h-48 md:hover:scale-105 transform md:hover:translate-y-8 duration-200 bg-blue-500 rounded-xl shadow-lg flex justify-center items-center cursor-pointer`}>
 			<h3 className="text-white font-bold text-[5rem]">{catArray[index]}</h3>
 		</div>
 	)

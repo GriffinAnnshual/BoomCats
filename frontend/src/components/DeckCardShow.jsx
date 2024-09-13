@@ -17,7 +17,7 @@ function DeckCardShow({num}) {
     
     return (
 			<div
-				className={` md:w-60  border-2 md:h-72 w-36 h-48  hover:scale-105 transform duration-200 bg-blue-500 rounded-xl shadow-lg m-4 flex-col pt-[1rem] mx-auto justify-center cursor-pointer`}>
+				className={` md:w-60  border-2 md:h-72 w-36 h-48  bg-blue-500 rounded-xl shadow-lg m-4 flex-col pt-[1rem] mx-auto justify-center cursor-pointer`}>
 				<h3 className="text-white text-center font-bold text-[5rem]">
 					{Emoji[num]}
 				</h3>

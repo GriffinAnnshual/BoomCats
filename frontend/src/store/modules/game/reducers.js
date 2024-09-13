@@ -24,10 +24,13 @@ const gameSlice = createSlice({
 	reducers: {
 		resetDeck(state) {
 			state.deck = shuffleArray([0,1,3])
-            state.life = 0
 		},
 
-		removeDeck(state, action) {
+        resetLife(state){
+            state.life = 0
+        }
+
+		,removeDeck(state, action) {
 			const num = action.payload
 			const currentDeck = state.deck
             currentDeck.splice(num, 1)
