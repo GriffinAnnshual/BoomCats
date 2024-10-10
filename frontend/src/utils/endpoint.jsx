@@ -1,6 +1,6 @@
 
 
 
-const endpoint = "https://boomcats-production.up.railway.app"
+const endpoint = "https://boomcats.onrender.com"
 
 export default endpoint
